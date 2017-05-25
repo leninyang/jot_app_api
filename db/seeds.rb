@@ -13,9 +13,15 @@ User.create([
 
 Note.create([
     { title: "The dog ate it.",
-      content: "I hope he doesnt die. I should take him to the vet.",
+      content: "I hope it doesnt die. I should take him to the vet.",
       starred: false,
       archived: false,
       user_id: 1
     },
+    { title: "The cat ate it.",
+      content: "I hope he it dies. Life would be much better.",
+      starred: false,
+      archived: false,
+      user_id: 1
+    }
 ]);
