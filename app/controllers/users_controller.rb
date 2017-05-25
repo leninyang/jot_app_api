@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
-  # run the authenticate_token method for all user actions except login and create:
   before_action :authenticate_token, except: [:login, :create]
   before_action :authorize_user, except: [:login, :create, :index]
 

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create([
     { username: "lenin",
-      password_digest: "password"
+      password: "password"
     },
 ]);
 
