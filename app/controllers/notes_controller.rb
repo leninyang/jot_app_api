@@ -36,10 +36,11 @@ class NotesController < ApplicationController
 
   # PATCH/PUT /notes/1
   def update
+    note = Note.find(params[:id])
     if @note.update(note_params)
-      render json: @note
+      render json: { status: 201, note: note }
     else
-      render json: @note.errors, status: :unprocessable_entity
+      render json: { status: 422, note: note }
     end
   end
 
