@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   # Login action
   def login
     user = User.find_by(username: params[:user][:username])
+    
     if user && user.authenticate(params[:user][:password])
       token = create_token(user.id, user.username)
       render json: {status: 200, token: token, user: user}
@@ -33,9 +34,9 @@ class UsersController < ApplicationController
     @user = User.new(username:params[:user][:username], password:params[:user][:password])
 
     if @user.save
-      render json: @user, status: :created, location: @user
+      render json: {status: 201, user: @user}
     else
-      render json: @user.errors, status: :unprocessable_entity
+      render json: {status: 422, user: @user}
     end
   end
 
