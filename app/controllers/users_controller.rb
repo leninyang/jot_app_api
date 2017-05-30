@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   # Login action
   def login
     user = User.find_by(username: params[:user][:username])
-    
+
     if user && user.authenticate(params[:user][:password])
       token = create_token(user.id, user.username)
       render json: {status: 200, token: token, user: user}
@@ -73,7 +73,7 @@ class UsersController < ApplicationController
   # All this method does is return an object (or hash) that includes our user's info.
   def payload(id, username)
     {
-      exp: (Time.now + 30.minutes).to_i,
+      exp: (Time.now + 5.minutes).to_i,
       iat: Time.now.to_i,
       iss: ENV['JWT_ISSUER'],
       user: {
