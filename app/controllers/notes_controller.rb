@@ -2,14 +2,10 @@ class NotesController < ApplicationController
   before_action :set_note, only: [:show, :update, :destroy]
   # before_action :authenticate_token
   # before_action :authorize_user
-
+  
   # GET /notes
   def index
-      # puts 5
-      @notes = Note.all
-      # where(user_id: 5)
-    # where(user_id: get_current_user.id)
-    # find_by(user_id: get_current_user.id)
+    @notes = Note.all
 
     render json: @notes
   end
@@ -56,13 +52,13 @@ class NotesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_note
-      @note = Note.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_note
+    @note = Note.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def note_params
-      params.require(:note).permit(:title, :content, :starred, :archived, :user_id)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def note_params
+    params.require(:note).permit(:title, :content, :starred, :archived, :user_id)
+  end
 end
