@@ -1,13 +1,15 @@
 # JoT API
 Rails Backend for Jot App
+
 <a href="https://jot-note-app.herokuapp.com/"><img src="public/images/readme/intro.png"></a>
 _**/jät/ verb:** to jot means to write (something) quickly. JoT is a simple note taking application that helps capture what's on your mind._
 
-![Live Site](https://jot-note-app.herokuapp.com/)
-![Frontend Repo](https://github.com/leninyang/jot_app_frontend)
+[Live Site](https://jot-note-app.herokuapp.com/)
+
+[Frontend Repo](https://github.com/leninyang/jot_app_frontend)
 
 ## Technologies
-**BACKEND:** Ruby On Rails, POSTGRESQL
+**BACKEND:** Ruby On Rails, PostgreSQL
 
 **AUTHENTIFICATION:** [Javascript Web Tokens](https://jwt.io/introduction/)
 
