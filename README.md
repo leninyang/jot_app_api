@@ -1,24 +1,52 @@
-# README
+# JoT
+![https://jot-note-app.herokuapp.com/](public/images/readme/intro.png)
+_**/jät/ verb:** to jot means to write (something) quickly. JoT is a simple note taking application that helps capture what's on your mind._
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Technologies
+**BACKEND:** Ruby On Rails, POSTGRESQL
 
-* Ruby version
+**AUTHENTIFICATION:** [Javascript Web Tokens](https://jwt.io/introduction/)
 
-* System dependencies
 
-* Configuration
+## ERD
+```
+User
+- Has many notes
 
-* Database creation
+Note
+- Belongs to user
+```
 
-* Database initialization
+## SCHEMA
+```
+User
+  t.string "username"
+  t.string "password"
+  t.string "name"
+```
+```
+Notes
+  t.string "title"
+  t.text "content"
+  t.boolean "starred"
+  t.boolean "archived"
+```
 
-* How to run the test suite
+## User Stories
+**User should be able to:**
 
-* Services (job queues, cache servers, search engines, etc.)
+- Create an account.
+- Create, update, delete a note.
+- See a list of all the notes.
+- Search through his/her notes.
+- Star/Favorite a note
+- See a list of all the starred/favorited notes.
+- Archive a note
+- See a list of all archived notes.
 
-* Deployment instructions
+**Stretch:**
 
-* ...
+- Ability to add photos in your notes
+- Ability to format notes (i.e. bold, italic, bullet list)
+- Share notes with other users (Collaboration)
