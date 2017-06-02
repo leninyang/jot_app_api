@@ -1,4 +1,5 @@
-# JoT
+# JoT API
+Rails Backend for Jot App
 <a href="https://jot-note-app.herokuapp.com/"><img src="public/images/readme/intro.png"></a>
 _**/jät/ verb:** to jot means to write (something) quickly. JoT is a simple note taking application that helps capture what's on your mind._
 
