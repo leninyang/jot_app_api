@@ -5,7 +5,8 @@ _**/jät/ verb:** to jot means to write (something) quickly. JoT is a simple not
 
 [Live Site](https://jot-note-app.herokuapp.com/)
 
-[Frontend Repo](https://github.com/leninyang/jot_app_frontend)
+[Backend Repo](https://github.com/leninyang/jot_app_frontend)
+[Backend Heroku](https://jot-note-api.herokuapp.com/)
 
 ## Technologies
 **BACKEND:** Ruby On Rails, PostgreSQL
